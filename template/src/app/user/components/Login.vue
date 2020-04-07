@@ -9,7 +9,7 @@ import store from '@/store/index'
 
 export default {
   mounted () {
-    console.log(store.state.auth.title)
+    
   },
 }
 </script>

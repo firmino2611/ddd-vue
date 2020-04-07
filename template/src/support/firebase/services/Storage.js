@@ -1,6 +1,6 @@
 import BaseConfig from "../BaseConfig";
 
-export default class Stprage extends BaseConfig{
+export default class Storage extends BaseConfig{
 
   constructor () {
     super()

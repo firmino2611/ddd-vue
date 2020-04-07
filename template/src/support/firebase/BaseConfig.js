@@ -9,6 +9,7 @@ export default class BaseConfig {
   firestoreInstance;
   authInstance;
   storageInstance;
+  
 
   constructor() {
     if (!!BaseConfig.instance) {

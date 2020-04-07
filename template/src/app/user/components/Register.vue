@@ -12,6 +12,7 @@ export default {
   mounted () {
     const fire = new Firestore()
 
+   
   },
 }
 </script>
