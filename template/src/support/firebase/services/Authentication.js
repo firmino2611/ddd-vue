@@ -27,6 +27,18 @@ export default class Authentication extends BaseConfig {
   }
 
   /**
+   * Autentica o usuário utilizando uma conta do Google
+   * @param {Function} callback 
+   */
+  authGoogle (callback) {
+    let provider = this.authGoogle
+    provider.addScope('https://www.googleapis.com/auth/contacts.readonly')
+    return this.authInstance.signInWithPopup(provider)
+      .then(callback)
+      
+  }
+
+  /**
    * Cadastra um novo usuario no sistema de autentuicação do Firebase
    * @param {String} email 
    * @param {String} password 
@@ -56,7 +68,7 @@ export default class Authentication extends BaseConfig {
    */
   emailVerify () {
     let user = this.currentUser()
-    return this.authInstance.sendEmailVerification()
+    return user.sendEmailVerification()
   }
 
   /**
@@ -65,7 +77,7 @@ export default class Authentication extends BaseConfig {
    */
   updatePassword (password) {
     let user = this.currentUser()
-    return this.authInstance.updatePassword(password)
+    return user.updatePassword(password)
   }
 
   

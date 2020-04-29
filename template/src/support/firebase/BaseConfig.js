@@ -23,6 +23,9 @@ export default class BaseConfig {
     // Inicializa as instancias dos recursos que pretende utilizar no projeto
     this.firestoreInstance = Firebase.firestore();
     this.authInstance = Firebase.auth();
+
+    this.authGoogleProvider = new Firebase.auth.GoogleAuthProvider()
+
     this.storageInstance = Firebase.storage();
 
     return this;
