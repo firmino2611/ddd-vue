@@ -27,18 +27,4 @@ export default class Firestore extends BaseConfig {
     return this
   }
 
-  getDocOfCollection(collection, doc) {
-    return this.firestoreInstance.collection(collection).doc(doc)
-  }
-
-  getColeection(collection) {
-    return this.firestoreInstance.collection(collection)
-  }
-
-  getSubCollectionOfDoc(doc, subcollection) {
-    let collection = doc.split('.')
-    return this.firestoreInstance.collection(collection[0]).doc(collection[1])
-      .collection(subcollection)
-  }
-
 }

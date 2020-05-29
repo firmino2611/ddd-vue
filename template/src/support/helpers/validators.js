@@ -20,9 +20,7 @@ const email = (email) => {
 }
 
 const min = (value, min) => {
-  if (value.length < min) return false;
-
-  return true;
+  return value.length >= min;
 }
 
 const equal = (field1, field2) => {
@@ -50,8 +48,8 @@ const cpf = (cpf) => {
   Resto = (Soma * 10) % 11;
 
   if (Resto == 10 || Resto == 11) Resto = 0;
-  if (Resto != parseInt(cpf.substring(10, 11))) return false;
-  return true;
+  return Resto == parseInt(cpf.substring(10, 11));
+
 }
 
 const cnpj = (cnpj) => {
@@ -98,9 +96,9 @@ const cnpj = (cnpj) => {
     if (pos < 2) pos = 9;
   }
   let resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
-  if (resultado != digitos.charAt(1)) return false;
+  return resultado == digitos.charAt(1);
 
-  return true;
+
 }
 
 module.exports = {email, equal, cpf, cnpj, min};

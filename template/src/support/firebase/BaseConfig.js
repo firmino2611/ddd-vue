@@ -9,7 +9,7 @@ export default class BaseConfig {
   firestoreInstance;
   authInstance;
   storageInstance;
-  
+
 
   constructor() {
     if (!!BaseConfig.instance) {
@@ -27,6 +27,7 @@ export default class BaseConfig {
     this.authGoogleProvider = new Firebase.auth.GoogleAuthProvider()
 
     this.storageInstance = Firebase.storage();
+    this.functionInstance = Firebase.functions();
 
     return this;
   }

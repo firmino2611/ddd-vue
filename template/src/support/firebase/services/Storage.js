@@ -9,14 +9,14 @@ export default class Storage extends BaseConfig{
       return Storage.instance
     }
 
-    Storage.instance = this 
+    Storage.instance = this
     // implementar possiveis logicas aqui
     return this
   }
 
   /**
    * Retorna a url de download do arquivo
-   * @param String fullPath 
+   * @param {string} fullPath
    */
   async getDownloadURL(fullPath) {
     return await this.storageInstance
