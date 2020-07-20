@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "firebase": "^7.2.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mdbvue": "^6.7.1",
     "slug": "^3.0.1",
     "vue": "^2.6.11",
